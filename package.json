@@ -1,0 +1,84 @@
+{
+  "name": "employee_skills",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@formatjs/intl-pluralrules": "^3.4.9",
+    "@formatjs/intl-relativetimeformat": "^7.2.9",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@sentry/react": "^5.25.0",
+    "@sentry/tracing": "^5.25.0",
+    "axios": "^0.20.0",
+    "clsx": "^1.1.1",
+    "echarts": "^4.9.0",
+    "echarts-for-react": "^2.0.16",
+    "fontsource-roboto": "^3.0.3",
+    "history": "^4.10.1",
+    "immutability-helper": "^3.1.1",
+    "lodash": "^4.17.20",
+    "luxon": "^1.25.0",
+    "mdi-material-ui": "^6.19.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^16.13.1",
+    "react-intl": "^5.8.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-storyshots": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.26",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.7",
+    "cross-var": "^1.1.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "jest-canvas-mock": "^2.3.0",
+    "mockdate": "^3.0.2",
+    "react-test-renderer": "^16.13.1",
+    "source-map-explorer": "^2.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
+    "lint": "EXTEND_ESLINT=true ./node_modules/.bin/eslint ./src --ext .jsx,.js",
+    "jest": "react-scripts test --watchAll=false",
+    "test": "cross-var $npm_execpath run lint && react-scripts test --watchAll=false",
+    "coverage": "react-scripts test --coverage --watchAll=false",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "update-theme-scss": "node ./tools/update-theme-scss.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules(?![\\/](luxon)[\\/]).+\\.jsx?$"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "IE 11"
+    ]
+  }
+}
